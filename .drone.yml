@@ -12,6 +12,7 @@ steps:
   - name: build image
     image: plugins/docker
     settings:
+      registry: r.anetz.net
       username: robot$drone
       password:
         from_secret: r_token
