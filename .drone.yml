@@ -1,3 +1,4 @@
+---
 kind: pipeline
 name: default
 
@@ -7,6 +8,9 @@ steps:
     commands:
       - go generate
       - go build
+
+  - name: build image
+    image: plugins/docker
 
 trigger:
   branch:
