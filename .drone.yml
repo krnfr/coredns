@@ -7,7 +7,7 @@ steps:
     image: golang
     commands:
       - go generate
-      - go build
+      - make
 
   - name: build image
     image: plugins/docker
