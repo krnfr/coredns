@@ -11,6 +11,12 @@ steps:
 
   - name: build image
     image: plugins/docker
+    settings:
+      username: robot$drone
+      password:
+        from_secret: r_token
+      repo: r.anetz.net/anetz/coredns
+      tags: latest
 
 trigger:
   branch:
